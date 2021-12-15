@@ -31,7 +31,7 @@ app = Flask(__name__)
 def hello_world():
     links = f'<a href="/stats">View Stats</a><br/>' \
             f'Send request to fibonacci to generate load<br/>' \
-            f'<a href="/fibonacci">Fibonacci</a><br/>'
+            f'<a href="/fibonacci/4">Fibonacci</a><br/>'
 
     return links
 
@@ -41,6 +41,6 @@ def stats_page():
     return stats()
 
 
-@app.route('/fibanacci/<int:n>')
+@app.route('/fibonacci/<int:n>')
 def fibonacci(n):
     return str(Fibonacci(n))
