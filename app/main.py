@@ -6,7 +6,7 @@ def stats():
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>CPU STATS </b><br/>' \
+    stats = f'<b>SERVER STATS </b><br/>' \
             f'<b>CPU : {cpuUsage}%</b><br/>' \
             f'<b>RAM : {memory}%</b><br/>' \
             f'<b>DISK : {disk}%</b><br/>'
@@ -28,7 +28,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
+def home():
     links = f'<a href="/stats">View Stats</a><br/>' \
             f'Send request to fibonacci to generate load<br/>' \
             f'<a href="/fibonacci/4">Fibonacci</a><br/>'
