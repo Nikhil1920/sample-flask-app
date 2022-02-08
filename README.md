@@ -13,7 +13,7 @@ You can use the fibonacci calculator to generate load on the server by giving it
 # Docker
 
 To build the image:
-`docker build -t <give-tag-name> .`
+`docker build . -t <give-tag-name> .`
 
 To run the docker container:
 `docker run -d -p 8080:8080 <image-name>`
